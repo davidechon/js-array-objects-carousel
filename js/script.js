@@ -140,9 +140,8 @@ prev.addEventListener("click", slideUp);
 
 const TIMER = setInterval(slideUp, 2000);
 
-const FERMA = document.getElementById('btn').addEventListener('click', clearInterval);
+let btnStop = document.getElementById('btnStop').addEventListener('click', fermaTutto);
 
-// clearInterval(TIMER);
-function clearInterval(){
-  clearInterval(TIMER);
+function fermaTutto() {
+    clearInterval(TIMER);
 }
