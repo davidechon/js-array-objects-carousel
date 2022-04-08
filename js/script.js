@@ -11,6 +11,8 @@
 // Bonus:
 // aggiungere un effetto al cambio dell'immagine
 
+
+
 //////////////////////////////////
 // 1. Dai tre array
 // Creo una costante items con oggetti img + title + text
@@ -131,3 +133,16 @@ function slideUp() {
 
 next.addEventListener("click", slideDown);
 prev.addEventListener("click", slideUp);
+
+//////////////////////////////////
+// 3. aggiungere allo slider una timing function per far partire lo slider in automatico (con un bottone per fermarlo)
+//
+
+const TIMER = setInterval(slideUp, 2000);
+
+const FERMA = document.getElementById('btn').addEventListener('click', clearInterval);
+
+// clearInterval(TIMER);
+function clearInterval(){
+  clearInterval(TIMER);
+}
