@@ -1,28 +1,48 @@
-/*
-Consegna:
-Dati tre array contenenti:
- - una lista ordinata di 5 immagini,
- - una lista ordinata dei relativi 5 luoghi e
- - una lista di 5 news,
-creare un carosello come nella foto allegata.
-*/
+// repo: js-array-objects-carousel
+// Consegna:
+// 1.Dai tre array contenenti:
+//  - una lista ordinata di 5 immagini,
+//  - una lista ordinata dei relativi 5 luoghi e
+//  - una lista di 5 news,
+//  creare un array di oggetti (manualmente)
+// 2. aggiornare il codice con i nuovi valori
+// 3. aggiungere allo slider una timing function per far partire lo slider in automatico (con un bottone per fermarlo)
+// 4. refactoring
+// Bonus:
+// aggiungere un effetto al cambio dell'immagine
+
+//////////////////////////////////
+// 1. Dai tre array
+// Creo una costante items con oggetti img + title + text
+
 const items = [
-  "img/01.jpg",
-  "img/02.jpg",
-  "img/03.jpg",
-  "img/04.jpg",
-  "img/05.jpg"
+  {
+    img: "../img/01.jpg",
+    title: "Svezia",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.",
+  },
+  {
+    img: "../img/02.jpg",
+    title: "Svizzera",
+    text: "Lorem ipsum",
+  }
+  {
+    img: "../img/03.jpg",
+    title: "Gran Bretagna",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+  }
+  {
+    img: "../img/04.jpg",
+    title: "Germania",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam",
+  }
+  {
+    img: "../img/05.jpg",
+    title: "Paradise",
+    text: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam",
+  }
 ];
 
-const title = ["Svezia", "Svizzera", "Gran Bretagna", "Germania", "Paradise"];
-
-const text = [
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.",
-  "Lorem ipsum",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,",
-  "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,"
-];
 
 //variabile per raccogliere tutto l'html che va in items-container
 let itemTemplate = "";
