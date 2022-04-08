@@ -75,3 +75,8 @@
 .prev {
   bottom: -20px;
 }
+#btnStop {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
