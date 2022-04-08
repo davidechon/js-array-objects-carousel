@@ -25,24 +25,28 @@ const items = [
     img: "../img/02.jpg",
     title: "Svizzera",
     text: "Lorem ipsum",
-  }
+  },
   {
     img: "../img/03.jpg",
     title: "Gran Bretagna",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-  }
+  },
   {
     img: "../img/04.jpg",
     title: "Germania",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam",
-  }
+  },
   {
     img: "../img/05.jpg",
     title: "Paradise",
     text: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam",
   }
 ];
+// console.log(items);
 
+//////////////////////////////////
+// 2. aggiornare il codice con i nuovi valori
+// Creo un literal template con i nuovi valori
 
 //variabile per raccogliere tutto l'html che va in items-container
 let itemTemplate = "";
@@ -61,18 +65,18 @@ for (let i = 0; i < items.length; i++) {
   }
   itemTemplate += `
   <div class="item ${classActive}">
-    <img src="${items[i]}" />
+    <img src="${items[i].img}" />
       <div class="title">
-        <h2>${title[i]}</h2>
-        <p>${text[i]}</p>
+        <h2>${items[i].title}</h2>
+        <p>${items[i].text}</p>
       </div>
   </div>`;
   thumbTemplate += `
   <div class="thumb ${classActive}">
-    <img src="${items[i]}" alt="" />
+    <img src="${items[i].img}" alt="${items[i].title}" />
   </div>`;
 }
-//console.log(thumbTemplate);
+// console.log(thumbTemplate);
 
 // metto in due variabili rispettivamente i contenitori che si trovano nell'html
 const itemsContainer = document.querySelector(".items-container");
